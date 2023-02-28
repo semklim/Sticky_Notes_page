@@ -1,0 +1,147 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	overflow-x: hidden;
+	font-family: Tahoma, Arial, 'Nimbus Sans L', sans-serif;
+    font-size: 13px;
+	width: 100%;
+	display: flex;
+}
+
+ul{
+	list-style: none;
+}
+
+aside{
+	text-align: center;
+	max-width: 300px;
+	color: white;
+	top: 0;
+	position: sticky;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding: 2%;
+	height: 100vh;
+	background-color: #444;
+	border-right: 2px solid;
+	border-image: linear-gradient(#444 0%, rgb(0, 255, 251) 40%, rgb(0, 255, 251) 50%, rgb(0, 255, 251) 60%, #444 100%) 1 100%;
+}
+
+aside > button, textarea{
+	margin: 5px 0;
+}
+aside > button{
+	box-sizing: content-box;
+	padding: 0 10px;
+	width: 120px;
+	border-radius: 5px;
+	border: 1px solid;
+	border-image: linear-gradient(#444 0%, rgb(0, 255, 251) 40%, rgb(0, 255, 251) 50%, rgb(0, 255, 251) 60%, #444 100%) 1 100%;
+	background-color: #444;
+	color: white;
+	transition: 1s;
+	transition-timing-function: cubic-bezier(0.94, 1.11, 0, 0.94);
+	transition-property: background-position;
+}
+
+
+aside > button:hover{
+	color: black;
+	background: rgb(0, 255, 251);
+}
+
+
+
+aside > button:active{
+	outline: 2px solid white;
+	background-blend-mode: multiply;
+}
+
+main{
+	width: 100%;
+	padding: 2%;
+	position: relative;
+	background-color: rgb(45, 44, 44);
+	display: flex;
+	flex-wrap: wrap;
+	align-content: start;
+	column-gap: calc((100vw - 300px) / 30);
+	row-gap: 30px;
+}
+
+.logo{
+font-size: 30px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin-bottom: 30px;
+}
+
+.stickyNote{
+	width: 165px;
+	position: relative;
+	padding: 5px;
+	background-color: white;
+	border:1px solid #000;
+	border-radius: 10px;
+	word-wrap: break-word;
+	white-space: break-spaces;
+}
+
+.closeBtn{
+	padding: 5px;
+	position: absolute;
+	top: 0;
+	left: 100%;
+	text-align: center;
+	width: 25px;
+	background-color: white;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: 0.4s;
+	user-select: none;
+}
+
+.closeBtn:hover{
+	box-shadow: 0px 0px 4px 0px black;
+	transform: scale(110%);
+}
+
+.text {
+	max-width: 300px;
+	border:1px solid #000;
+	border-radius: 10px;
+}
+.text .textarea_behavior{
+
+	width:100%;
+	border:0;
+	word-wrap: break-word;
+}
+textarea{
+	font-family: Tahoma, Arial, 'Nimbus Sans L', sans-serif;
+    font-size: 13px;
+	width: 165px;
+	padding: 5px;
+	height: 40px;
+	overflow:hidden;
+	resize:none;
+	border-radius: 5px;
+}
+.text .comment_text_hidden{
+	position: relative;
+}
+
+.text #comment_text_hidden{
+	visibility:hidden;
+	position: absolute;
+}
+textarea:focus-visible {
+	outline: 1px solid rgb(0, 255, 251);
+}
+
+
+
